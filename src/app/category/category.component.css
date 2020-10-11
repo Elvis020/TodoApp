@@ -1,0 +1,85 @@
+input[type = text]{
+  background-color: #fefefe;
+  padding-left: 20px;
+  border: 1px solid#28a745;
+  border-radius: 4px;
+  transition: all .3s;
+}
+
+input[type=text]:focus{
+  border: 1px solid rgba(29, 228, 95, 0.308);
+  outline: none;
+}
+
+.btn-todo{
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  transition: all .3s;
+}
+
+.btn-todo:hover {
+  background-color: #09992b;
+  -webkit-box-shadow: 0px 0px 33px -10px #09992bc9;
+  -moz-box-shadow: 0px 0px 33px -10px #09992bc9;
+  box-shadow: 0px 0px 33px -10px #09992bc9;
+  color: #fff;
+}
+
+.card {
+  border: 1px solid #c4c4c4;
+  margin-top: 50px;
+  transition: all .4s;
+  min-height: 150px;
+}
+.card:hover{
+  border-top-left-radius: 30px;
+  border-left: 5px solid #4772fe;
+  transform: scale(1.1);
+  -webkit-box-shadow: 0px 0px 33px -10px #4772fe4b;
+  -moz-box-shadow: 0px 0px 33px -10px #4772fe4b;
+  box-shadow: 0px 0px 33px -10px #4772fe4b;
+  background: #fff;
+}
+
+.badge-primary{
+  background-color: #e9eeff;
+  color: #4772fe;
+  padding: 6px;
+}
+
+.badge-danger{
+  background-color: #fef0f0;
+  color: #f04141;
+  padding: 6px;
+  cursor: pointer;
+  margin-top: 50px;
+}
+
+
+.cat-tools{
+  display: none;
+}
+
+.cat-tools i{
+  margin: 0px 5px;
+  cursor: pointer;
+}
+
+.categories-list .card:hover{
+  cursor: pointer;
+  background-color: #f8f8f8;
+}
+
+.categories-list .card:hover .cat-tools{
+  display: inline;
+}
+
+.elvis-danger {
+  color: tomato;
+  margin-bottom: -19px;
+
+}
+.elvis-danger-border{
+  border: 1px solid tomato !important;
+}

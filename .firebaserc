@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "spacey-todoapp": {
+      "hosting": {
+        "TodoApp": [
+          "spacey-todoapp"
+        ]
+      }
+    }
+  }
+}

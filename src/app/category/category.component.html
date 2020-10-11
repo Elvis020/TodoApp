@@ -1,1 +1,55 @@
-<p>category works!</p>
+<div class="row justify-content-center md-3">
+  <div class="col-md-4 text-center">
+    TODO CATEGORIES
+    <p class="text-info">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  </div>
+</div>
+
+<!-- Search Bar -->
+<div class="row">
+  <div class="col-md-12">
+    <form #f="ngForm" (ngSubmit)="submitForm(f)"  class="form-inline">
+      <div class="col-md-10 form-group">
+        <input type="text" class="form-control-plaintext" ngModel name="categoryName" required #categoryName='ngModel'
+          [ngClass]="{'elvis-danger-border':categoryName.invalid && categoryName.touched}"
+          placeholder="Add new categories here 🧑...">
+          <small *ngIf="!f.submitted && categoryName.invalid && categoryName.touched" class="elvis-danger">Category
+              is required
+            </small>
+        </div>
+
+      <button type="submit" [disabled]="categoryName.touched && f.invalid"
+        class="btn btn-success col-md-2 btn-todo btn-block">Add</button>
+
+    </form>
+  </div>
+</div>
+
+
+
+<div class="row categories-list">
+  <div class="col-md-3" *ngFor="let category of categories">
+    <div class="card" [style.border-left-color]='category.data.colorCode' >
+      <div class="card-body">
+        <div class="clearfix">
+          <div class="float-left">
+            <div class="badge badge-primary">CATEGORY</div>
+          </div>
+          <div class="float-right cat-tools">
+            <small><i class="fa fa-pencil-alt text-success"></i></small>
+            <small><i class="fas fa-trash text-danger"></i></small>
+          </div>
+        </div>
+
+        <div class="todo-content">
+          <h3 style="margin-top: 15px !important;"> {{category.data.category}} </h3>
+          <small class="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small><br>
+          <span class="badge badge-danger">{{category.data.todoCount}} - Todos</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
